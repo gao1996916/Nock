@@ -1,5 +1,27 @@
-# Nock
+# 🧱 Nockchain 一键部署脚本
 
-Nockchain 是适用于重量级可验证应用程序的轻量级区块链。
+这是一个用于在 Linux / VPS 上一键部署 [Nockchain](https://github.com/0xmoei/nockchain) zkPoW 节点的自动化脚本（`deploy_nock.sh`）。适用于主网/测试网挖矿环境。
 
-我们相信，区块链的未来是轻量级、无需信任的结算，实现重量级的可验证计算。实现这一目标的唯一途径是将通过公开复制实现的可验证性替换为通过私有证明实现的可验证性。证明发生在链下，而验证则发生在链上。
+---
+
+## 🚀 项目功能
+
+- 自动安装依赖：Rust、Docker、build-essential 等
+- 自动克隆、编译 Nockchain 节点代码
+- 自动生成钱包密钥、配置挖矿公钥
+- 自动构建 Leader 与 Follower 节点
+- 自动设置 wallet 命令路径（终端重启后仍可用）
+
+---
+
+## 📦 使用方法
+
+```bash
+# 下载脚本
+curl -o deploy_nock.sh https://raw.githubusercontent.com/gao1996916/Nock/main/deploy_nock.sh
+
+# 赋予执行权限
+chmod +x deploy_nock.sh
+
+# 执行部署
+./deploy_nock.sh
